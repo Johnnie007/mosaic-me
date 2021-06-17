@@ -1,0 +1,38 @@
+.sidebar{
+    border: 1px solid red;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+   
+    &__form{
+        border: 1px solid red;
+        margin: 1rem;
+    }
+    &__search{
+        border: 1px solid red;
+        margin: .5rem;
+        display: flex;
+        justify-content: center;
+        &--input{
+            width: 10rem
+        }
+    }
+
+    &__upload{
+        border: 1px solid red;
+        margin: .5rem;
+    }
+    
+
+    &__button{
+        border: 1px solid red;
+        margin: .5rem;
+        display: flex;
+        justify-content: center;
+        &--btn{
+            margin: 1rem;
+            align-self: center;
+        }
+    }
+
+}
