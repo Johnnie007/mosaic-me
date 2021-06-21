@@ -75,6 +75,11 @@ const apiUrl = "https://api.unsplash.com/search/photos?per_page=400&query=";
 
 function Sidebar(props){
 
+    let handleSubmit = (event) => {
+            event.preventDefault()
+            console.log(event.target.main);
+        } 
+
     let patternInputChange = (event) => {
          inputData = event.target.value;
          inputData = inputData.replace(' ', ',');
@@ -85,39 +90,50 @@ function Sidebar(props){
 
             console.log(response.data.results)
             let array = response.data.results;
-            let newArray = [];
+
             if(!array){
-                return console.warn('invalid')
-            }else
-            array.map((data) =>{
+                return console.warn('invalid');
+            }else{
+             const newArr = array.map((data) =>{
+             
                // console.log(data.urls)
-                newArray.push(data.urls)
-                return props.updatePattern(newArray) 
+                return data.urls
                
             })
+            props.updatePattern(newArr)
+        }
          })
         }
 
     let mainImg = event =>{
             event.preventDefault()
-            return props.updateMain(URL.createObjectURL(event.target.files[0]))
+            let main = URL.createObjectURL(event.target.files[0])
+            if(main){
+                return props.updateMain(main)
+            }else {
+                let image = 'https://via.placeholder.com/400';
+                return props.updateMain(image);
+            }
+            
         }
     return(
     <div className="sidebar">
-        <form className="sidebar__form" /*onSubmit={this.handleSubmit}*/>
+        <form className="sidebar__form" onSubmit={handleSubmit}>
+            
+            <div className="sidebar__upload">
+                <label className="sidebar__upload--label">Main Photo:</label>
+                <input type="file" placeholder="Upload" onChange={mainImg} name='main'/>
+            </div>
+
             <div className="sidebar__search">
                 <label className="Sidebar__search--label" ><input className="sidebar__search--input" type="text" placeholder="Search(optional)" name='pattern'onChange={patternInputChange} /></label>
             </div>
-            <div className="sidebar__upload">
-                <label className="sidebar__upload--label">Main Photo:</label>
-                <input type="file" placeholder="Upload" onChange={mainImg}/>
-            </div>
+            
             <div className='button'>
-                <button>Submit</button>
+               <input type="submit" value="submit"/>
             </div>
         </form>
-    {/* <img src={this.state.main}/> */}
-            {console.log()}        
+    {/* <img src={this.state.main}/> */}      
     </div>
                 )   
                  

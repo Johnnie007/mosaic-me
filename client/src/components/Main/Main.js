@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import Sidebar from '../SideBar/Sidebar';
 import Canvas from '../Canvas/Canvas';
-import hey from '../../Images/7.jpg'
+//import hey from '../../Images/7.jpg'
 
 // class Main extends React.Component{
 
@@ -29,9 +29,9 @@ function Main(){
     const [pattern, setPattern] = useState([]);
 
     useEffect(()=>{
-        console.log(pattern)
-        console.log('this is main'+ main)
-    }, [pattern], [main])
+      //  console.log(pattern)
+     //   console.log('this is main'+ main)
+    }, [pattern,main])
 
     return(
     <div className="main">
