@@ -5,6 +5,18 @@ import axios from 'axios';
 //import jsPDF from "jspdf";
 //import html2canvas from 'html2canvas';
 
+//generatePDF =() => {
+  //             const input = document.querySelector(".canvas-main__img");
+  //             html2canvas(input)
+  //               .then((canvas) => {
+  //                 const imgData = canvas.toDataURL("img/jpg");
+  //                 const pdf = new jsPDF();
+  //                 pdf.addImage(imgData, 'JPEG',0,0, 100, 100);
+  //                 // pdf.output('dataurlnewwindow');
+  //                 pdf.save("download.pdf");
+  //               });
+  //             }
+
 function Canvas(props){
   let mosaicDiv = [];
   let image = props.pattern;
@@ -29,7 +41,14 @@ function Canvas(props){
             <div className="canvas-main__img" style={{ backgroundImage: `url(${props.main})`}}>
                 {mosaicDiv.map((val) => {return(val)})}
            </div> 
-        <button type="primary">Download as PDF</button>
+      <div className="canvas-main__button">
+        <div className="canvas-main__download">
+          <button className="canvas-main__download--btn" type="primary">Download as PDF</button>
+        </div>
+        <div className="canvas-main__reset">
+          <button className="canvas-main__reset--btn" type="primary">Restart</button>
+        </div>
+      </div>
         </div>  
         )
 }

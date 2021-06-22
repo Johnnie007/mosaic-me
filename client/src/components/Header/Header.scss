@@ -6,16 +6,46 @@
     width: 100%;
     height: auto;
 
-    // &__div{
-    //     border: 1px solid red;
-    //     padding: 3rem;
-    // }
-
     &__title{
         border: 1px solid red;
         display: flex;
         justify-content: center;
         width: 100%;
+        color: transparent;
+        animation-name: example;
+        animation-duration: 7s;
+        background-position: bottom;
+        background-size: 15px;
+        background-clip: text;
+    }
+
+    @keyframes example {
+        0%{
+            transform: scale(7);
+        }
+        100%{
+            transform: scale(1);
+        }
+    }
+
+    &__link{
+        display: flex;
+        justify-content: center;
+        animation-name: fadeIn;
+        animation-duration: 15s;
+        &--a{
+            border: 1px solid black;
+        }
+    }
+
+    @keyframes fadeIn {
+        0%{
+           opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+        
     }
 
     &__description{
@@ -24,5 +54,22 @@
         justify-content: center;
         width: 250px;
         padding: 3rem;
+        &--p{
+        overflow: hidden;
+        box-sizing: border-box;
+        animation-name: typeWriting;
+        animation-duration: 5s;
+        animation-timing-function: steps(40, end);
+        white-space: nowrap;
+        }
+    }
+
+    @keyframes typeWriting {
+        from{
+            width: 0;
+        }
+        to{
+            width: 100%;
+        }
     }
 }

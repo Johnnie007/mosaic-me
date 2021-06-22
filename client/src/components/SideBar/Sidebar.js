@@ -47,20 +47,27 @@ function Sidebar(props){
         }
     return(
     <div className="sidebar">
-        <form className="sidebar__form" onSubmit={handleSubmit}>
+        <form className="sidebar__form" onSubmit={handleSubmit}> 
             
+            <div className="header__description">
+                <p className="header__description--p">Convert any image into Mosaic</p>
+            </div>
+
             <div className="sidebar__upload">
-                <label className="sidebar__upload--label">Main Photo:</label>
-                <input type="file" placeholder="Upload" onChange={mainImg} name='main'/>
+                <p className="sidebar__upload--label">Choose your main image</p>
+                <input className="sidebar__upload--input" type="file" placeholder="Upload" onChange={mainImg} name='main'/>
             </div>
 
             <div className="sidebar__search">
-                <label className="Sidebar__search--label" ><input className="sidebar__search--input" type="text" placeholder="Search(optional)" name='pattern'onChange={patternInputChange} /></label>
-            </div>
+                <p className="Sidebar__search--label" >Search your Pattern Image:</p><input className="sidebar__search--input" type="text" placeholder="What do you love" name='pattern'onChange={patternInputChange} />
             
             <div className='button'>
                <input type="submit" value="submit"/>
             </div>
+            
+            </div>
+
+            
         </form>      
     </div>)   
 }
