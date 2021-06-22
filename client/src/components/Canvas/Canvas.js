@@ -47,7 +47,6 @@ function Canvas(props){
   console.log(image)
 
   if(image.length !== 0){
-    let count = 10;
     let sumNum = 0;
    console.log(image)
    console.log(image.length)
@@ -55,15 +54,9 @@ function Canvas(props){
     if(sumNum == image.length){
       sumNum = 0;
     }
-    
-   // console.log(sumNum)
-    //console.log(image[sumNum])
-   
     if(image[sumNum] && image[sumNum].small){
-    //  console.log('Hello')
       mosaicDiv.push(<img className="test" src={image[sumNum].small}/>)
     }
-    
     sumNum++
   }
  
@@ -73,8 +66,6 @@ function Canvas(props){
     <div className="canvas-main" >
             <div className="canvas-main__img" style={{ backgroundImage: `url(${props.main})`}}>
                 {mosaicDiv.map((val) => {return(val)})}
-                {/* <img src={test}/> */}
-                {/* <img src={test}/> */}
            </div> 
         <button type="primary">Download as PDF</button>
         </div>  

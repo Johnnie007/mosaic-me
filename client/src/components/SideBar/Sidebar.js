@@ -95,10 +95,7 @@ function Sidebar(props){
                 return console.warn('invalid');
             }else{
              const newArr = array.map((data) =>{
-             
-               // console.log(data.urls)
-                return data.urls
-               
+                return data.urls  
             })
             props.updatePattern(newArr)
         }
