@@ -2,7 +2,9 @@ import "./Canvas.scss";
 import hey from  "../../Images/7.jpg";
 import React from 'react';
 import axios from 'axios';
-//import jsPDF from "jspdf";
+import {Link} from 'react-router-dom';
+import html2canvas from 'html2canvas';
+import jsPDF from "jspdf";
 //import html2canvas from 'html2canvas';
 
 //generatePDF =() => {
@@ -36,20 +38,49 @@ function Canvas(props){
     sumNum++
   }
   }
+
+  let generatePDF =() => {
+                const input = document.querySelector(".canvas-main__img");
+                html2canvas(input)
+                  .then((canvas) => {
+                    const imgData = canvas.toDataURL("img/jpg");
+                    const pdf = new jsPDF();
+                    pdf.addImage(imgData, 'JPEG',0,0, 100, 100);
+                    // pdf.output('dataurlnewwindow');
+                    pdf.save("download.pdf");
+                  });
+                }
+
+
+  // let download = (event) => {
+  //   console.log(event)
+  //   var cnvs = document.querySelector('.canvas-main__img');
+  //   html2canvas(document.querySelector('.canvas-main__img')).then(canvas => {
+  //     console.log(canvas);
+  //     let image = canvas.toDataURL("image/png").replace("image/png","image/octer-stream");
+  //    // console.log(image);
+  //     window.location.href=image;
+  // });
+  //}
+
   return(
     <div className="canvas-main" >
-            <div className="canvas-main__img" style={{ backgroundImage: `url(${props.main})`}}>
-                {mosaicDiv.map((val) => {return(val)})}
-           </div> 
+      
+      <div className="canvas-main__img" style={{ backgroundImage: `url(${props.main})`}}>
+        {mosaicDiv.map((val) => {return(val)})}
+      </div> 
+      
       <div className="canvas-main__button">
+        
         <div className="canvas-main__download">
-          <button className="canvas-main__download--btn" type="primary">Download as PDF</button>
+          <button className="canvas-main__download--btn" type="primary" onClick={generatePDF}>Download as PDF</button>
         </div>
+        
         <div className="canvas-main__reset">
-          <button className="canvas-main__reset--btn" type="primary">Restart</button>
+          <Link to='/'><button className="canvas-main__reset--btn" type="primary">Restart</button></Link>
         </div>
       </div>
-        </div>  
+  </div>  
         )
 }
 

@@ -1,6 +1,7 @@
 import './Sidebar.scss';
 import React from 'react';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 
 let inputData = '';
 const apiKey = "&client_id=whVq7dM1_Kqd3kcvB_s334hifdSJLAU-nM69nsp_pRQ";  
@@ -11,7 +12,12 @@ function Sidebar(props){
     let handleSubmit = (event) => {
             event.preventDefault()
             console.log(event.target.main);
-            axios
+        }
+/*This is the onChange function that will set input data for axios request*/
+    let patternInputChange = (event) => {
+         inputData = event.target.value;
+         inputData = inputData.replace(' ', ',');
+         axios
          .get(apiUrl+inputData+apiKey)
         .then(response => {
 
@@ -27,11 +33,6 @@ function Sidebar(props){
             props.updatePattern(newArr)
         }
          })
-        }
-/*This is the onChange function that will set input data for axios request*/
-    let patternInputChange = (event) => {
-         inputData = event.target.value;
-         inputData = inputData.replace(' ', ',');
         }
 /*This is the function that will set the main function */
     let mainImg = event =>{
@@ -62,7 +63,7 @@ function Sidebar(props){
                 <p className="Sidebar__search--label" >Search your Pattern Image:</p><input className="sidebar__search--input" type="text" placeholder="What do you love" name='pattern'onChange={patternInputChange} />
             
             <div className='button'>
-               <input type="submit" value="submit"/>
+               <Link to='/canvas'><input type="submit" value="submit"/></Link>
             </div>
             
             </div>
