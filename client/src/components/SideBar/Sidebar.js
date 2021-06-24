@@ -2,10 +2,13 @@ import './Sidebar.scss';
 import React from 'react';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
+import Head from "../Head/Head";
 
 let inputData = '';
 const apiKey = "&client_id=whVq7dM1_Kqd3kcvB_s334hifdSJLAU-nM69nsp_pRQ";  
 const apiUrl = "https://api.unsplash.com/search/photos?per_page=400&query=";
+const serpAPI = 'https://serpapi.com/search.json?q=';
+const serpKey = '&tbm=isch&ijn=0&api_key=52007a365e1bbd82ab736993f65e4f48d8ef74b4fd899f00d146dc6c48231f3b';
      
 function Sidebar(props){
 /*This is the handle submit function that will send an axios request. */
@@ -20,8 +23,7 @@ function Sidebar(props){
          axios
          .get(apiUrl+inputData+apiKey)
         .then(response => {
-
-            console.log(response.data.results)
+            console.log(response)
             let array = response.data.results;
 
             if(!array){
@@ -47,6 +49,8 @@ function Sidebar(props){
             
         }
     return(
+        <>
+        <Head/>
     <div className="sidebar">
         <form className="sidebar__form" onSubmit={handleSubmit}> 
             
@@ -70,6 +74,7 @@ function Sidebar(props){
 
             
         </form>      
-    </div>)   
+    </div>
+    </>)   
 }
 export default Sidebar;

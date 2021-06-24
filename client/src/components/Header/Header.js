@@ -12,7 +12,7 @@ function Header(){
     return(
         <header className="header">
                 <div className="header__div">
-                    <div className="header__title" style={{ backgroundImage: `url(${love})`}}>
+                    <div className="header__title">
                         <h1 className="header__h1" >Mosaic Me</h1>
                     </div>
                 <div className="header__link">

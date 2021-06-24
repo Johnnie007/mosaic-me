@@ -1,15 +1,15 @@
 .sidebar{
-    border: 1px solid red;
+   // border: 1px solid red;
     width: 100%;
     display: flex;
     justify-content: center;
    
     &__form{
-        border: 1px solid red;
+    //    border: 1px solid red;
         margin: 1rem;
     }
     &__search{
-        border: 1px solid red;
+//        border: 1px solid red;
         margin: .5rem;
         display: flex;
         flex-direction: column;
@@ -17,10 +17,21 @@
         &--input{
             width: 15rem;
         }
+        animation-name: fadeIn;
+        animation-duration: 10s;
+    }
+
+    @keyframes fadeIn {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
     }
 
     &__upload{
-        border: 1px solid red;
+   //     border: 1px solid red;
         margin: .5rem;
         display: flex;
         flex-direction: column;
@@ -29,11 +40,13 @@
         &--input{
             padding-left: 75px;
         }
+        animation-name: fadeIn;
+        animation-duration: 10s;
     }
 
 
     &__button{
-        border: 1px solid red;
+    //    border: 1px solid red;
         margin: .5rem;
         display: flex;
         flex-direction: column;
@@ -42,6 +55,9 @@
             margin: 1rem;
             align-self: center;
         }
+    }
+    .button{
+        padding: 1rem;
     }
 
 }
