@@ -1,5 +1,4 @@
 import "./Header.scss";
-import love from '../../Images/love2.jpg';
 import {Link} from 'react-router-dom';
 
 function Header(){

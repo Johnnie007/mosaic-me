@@ -23,7 +23,6 @@ import Head from "../Head/Head";
 function Canvas(props){
   let mosaicDiv = [];
   let image = props.pattern;
-  console.log(image)
 
   if(image.length !== 0){
     let sumNum = 0;
@@ -33,8 +32,10 @@ function Canvas(props){
     if(sumNum == image.length){
       sumNum = 0;
     }
-    if(image[sumNum] && image[sumNum].small){
+    if(typeof image[sumNum].small === 'string'){
       mosaicDiv.push(<img className="test" crossOrigin="anonymous" src={image[sumNum].small}/>)
+    }else if( typeof image[sumNum] === 'string'){
+      mosaicDiv.push(<img className="test" id='upload' src={image[sumNum]}/>)
     }
     sumNum++
   }
@@ -48,33 +49,37 @@ function Canvas(props){
 // }
 
 
-// let generatePDF =() => {
-//   const input = document.querySelector(".canvas-main__img");
-//   html2canvas(input)
-//     .then((canvas) => {
-//       console.log(canvas);
-//       const imgData = canvas.toDataURL("img/jpg");
-//       const pdf = new jsPDF();
-//       pdf.addImage(imgData, 'JPEG',0,0);
-//       // pdf.output('dataurlnewwindow');
-//       pdf.save("download.pdf");
-//     });
-//   }
+let generatePDF =() => {
+  const input = document.querySelector(".canvas-main__img");
+  html2canvas(input, {allowTaint: true, width:400, height:400})
+    .then((canvas) => {
+      console.log(canvas);
+      const imgData = canvas.toDataURL("img/jpg");
+      const pdf = new jsPDF();
+      pdf.addImage(imgData, 'JPEG',10,10);
+      // pdf.output('dataurlnewwindow');
+      pdf.save("download.pdf");
+    });
+  }
     //const input = document.querySelector(".canvas-main__img");
               
                 
 
 
   let download = (event) => {
-    console.log(event)
-    //var cnvs = document.querySelector('.canvas-main__img');
-    console.log(document.querySelector('.canvas-main__img'));
-    html2canvas(document.querySelector('.canvas-main__img')).then(canvas => {
-      console.log(canvas);
-      document.querySelector('body').appendChild(canvas)
-     let image = canvas.toDataURL("image/png").replace("image/png","image/octer-stream");
-     console.log(image);
-     window.location.href=image;
+   // console.log(event)
+    html2canvas(document.querySelector('.canvas-main__img'), {allowTaint: true, width:400, height:400})
+    .then(canvas => {
+   //  let image = canvas.toDataURL("image/png").replace("image/png","image/octet-stream");
+    // console.log(image);
+    // window.location.href=image; 
+    var link = document.createElement("a");
+			document.body.appendChild(link);
+			link.download = "html_image.png";
+      
+			link.href = canvas.toDataURL("image/png");
+			link.target = '_blank';
+			link.click();
   });
   }
 
@@ -89,9 +94,9 @@ function Canvas(props){
       
       <div className="canvas-main__button">
         
-        {/* <div className="canvas-main__download">
-          <button className="canvas-main__download--btn" type="primary" onClick={download}>Download as PDF</button>
-        </div> */}
+        <div className="canvas-main__download">
+          <button className="canvas-main__download--btn" type="primary" onClick={download}>Download</button>
+        </div>
         
         <div className="canvas-main__reset">
           <Link to='/upload'><button className="canvas-main__reset--btn" type="primary">Restart</button></Link>
