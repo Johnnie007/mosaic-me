@@ -69,22 +69,24 @@ function Sidebar(props){
 
     let results = () =>{
         if(search === 'pattern'){
+            props.updateHide('hide')
             return( <div className="sidebar__search">
-            <p className="Sidebar__search--label" >Search your Pattern Image:</p><input className="sidebar__search--input" type="text" placeholder="What do you love" name='pattern'onChange={patternInputChange} />
+            <p className="sidebar__search--label" >Search for your pattern image:</p><input className="sidebar__search--input" type="text" placeholder="What do you love" name='pattern'onChange={patternInputChange} />
         
         <div className='button'>
            <Link to='/canvas'><input type="submit" value="submit"/></Link>
         </div>
         </div>)
         } else if(search ==='upload'){
+            props.updateHide('visible')
             return(
-                <div>
-                    <form>
-                        <input type='file' multiple name='file' onChange={handleSubmit}/>
-                        <div className='button'>
-           <Link to='/canvas'><input type="submit" value="submit"/></Link>
-        </div>
-                    </form>
+                <div className="form__upload">
+                    
+                        <input className="form__upload--input" type='file' multiple name='file' onChange={handleSubmit}/>
+                        <div className='form__upload--btn'>
+                            <Link to='/canvas'><input type="submit" value="submit"/></Link>
+                        </div>
+                    
                 </div>
             )
         }
@@ -92,7 +94,6 @@ function Sidebar(props){
 
     const searchInput = event => {
             let name = event.target.className
-            console.log(typeof name)
               if(name === 'pattern'){
                   return setSearch(name)
               }
@@ -117,22 +118,11 @@ function Sidebar(props){
                 <input className="sidebar__upload--input" type="file" placeholder="Upload" onChange={mainImg} name='main'/>
             </div>
 
-            <div className="sideBar__toggle--btns">
+            <div className="sidebar__toggle--btns">
                <label><input className='upload' type='radio' name='upload' onChange={searchInput} />Upload Patterns</label>
                <label><input type='radio' name='upload' className='pattern' onChange={searchInput}/>Search Patterns</label>                
             </div>    
             <div>{results()}</div>        
-
-            {/* <div className="sidebar__search">
-                <p className="Sidebar__search--label" >Search your Pattern Image:</p><input className="sidebar__search--input" type="text" placeholder="What do you love" name='pattern'onChange={patternInputChange} />
-            
-            <div className='button'>
-               <Link to='/canvas'><input type="submit" value="submit"/></Link>
-            </div>
-            
-            </div> */}
-
-            
         </form>      
     </div>
     </>)   
