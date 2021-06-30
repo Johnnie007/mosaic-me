@@ -8,10 +8,6 @@ import peace from '../../Images/Peace.jpg';
 let inputData = '';
 const apiKey = "&client_id=whVq7dM1_Kqd3kcvB_s334hifdSJLAU-nM69nsp_pRQ";  
 const apiUrl = "https://api.unsplash.com/search/photos?per_page=400&query=";
-const serpAPI = 'https://serpapi.com/search.json?q=';
-const serpKey = '&tbm=isch&ijn=0&api_key=52007a365e1bbd82ab736993f65e4f48d8ef74b4fd899f00d146dc6c48231f3b';
-const pexelApi = ' "https://api.pexels.com/v1/search?query=';
-const pexelkey = '563492ad6f917000010000019084ed437c3d469a9a6c5bedef787a71';
      
 function Sidebar(props){
     const [search, setSearch] = useState();
