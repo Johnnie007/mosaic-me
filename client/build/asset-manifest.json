@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/mosaic-me/static/css/main.9e648aab.chunk.css",
+    "main.js": "/mosaic-me/static/js/main.7d1d97cd.chunk.js",
+    "main.js.map": "/mosaic-me/static/js/main.7d1d97cd.chunk.js.map",
+    "runtime-main.js": "/mosaic-me/static/js/runtime-main.94fb6f04.js",
+    "runtime-main.js.map": "/mosaic-me/static/js/runtime-main.94fb6f04.js.map",
+    "static/js/2.58206fd7.chunk.js": "/mosaic-me/static/js/2.58206fd7.chunk.js",
+    "static/js/2.58206fd7.chunk.js.map": "/mosaic-me/static/js/2.58206fd7.chunk.js.map",
+    "static/js/3.29846e1f.chunk.js": "/mosaic-me/static/js/3.29846e1f.chunk.js",
+    "static/js/3.29846e1f.chunk.js.map": "/mosaic-me/static/js/3.29846e1f.chunk.js.map",
+    "static/js/4.75d44a03.chunk.js": "/mosaic-me/static/js/4.75d44a03.chunk.js",
+    "static/js/4.75d44a03.chunk.js.map": "/mosaic-me/static/js/4.75d44a03.chunk.js.map",
+    "index.html": "/mosaic-me/index.html",
+    "static/css/main.9e648aab.chunk.css.map": "/mosaic-me/static/css/main.9e648aab.chunk.css.map",
+    "static/js/2.58206fd7.chunk.js.LICENSE.txt": "/mosaic-me/static/js/2.58206fd7.chunk.js.LICENSE.txt",
+    "static/js/3.29846e1f.chunk.js.LICENSE.txt": "/mosaic-me/static/js/3.29846e1f.chunk.js.LICENSE.txt",
+    "static/js/4.75d44a03.chunk.js.LICENSE.txt": "/mosaic-me/static/js/4.75d44a03.chunk.js.LICENSE.txt",
+    "static/media/7.f21ea7bc.jpg": "/mosaic-me/static/media/7.f21ea7bc.jpg",
+    "static/media/Graduation.79b2ea7a.jpg": "/mosaic-me/static/media/Graduation.79b2ea7a.jpg",
+    "static/media/Peace.ed248ea1.jpg": "/mosaic-me/static/media/Peace.ed248ea1.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.94fb6f04.js",
+    "static/js/3.29846e1f.chunk.js",
+    "static/css/main.9e648aab.chunk.css",
+    "static/js/main.7d1d97cd.chunk.js"
+  ]
+}
