@@ -3,7 +3,6 @@
     width: 100%;
     display: flex;
     justify-content: center;
-   
     &__form{
     //    border: 1px solid red;
         margin: 1rem;
@@ -79,4 +78,12 @@
     &--btn{
         margin-top: 1rem;
     }
+}
+.red{
+    color: red;
+}
+
+.image{
+    display: flex;
+    justify-content: center;
 }

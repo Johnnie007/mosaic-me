@@ -1,5 +1,7 @@
 import "./Header.scss";
 import {Link} from 'react-router-dom';
+import graduation from "../../Images/Graduation.jpg";
+
 
 function Header(){
 
@@ -16,6 +18,7 @@ function Header(){
                     </div>
                 <div className="header__link">
                    <Link to='/upload'><button className="header__link--a">Click here to begin</button></Link>
+                   <img className="header__graduation" alt="graduation" src={graduation}/>
                 </div>
             </div>
         </header>

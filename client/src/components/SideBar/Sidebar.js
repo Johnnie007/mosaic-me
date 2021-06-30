@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
 import Head from "../Head/Head";
+import peace from '../../Images/Peace.jpg';
 
 let inputData = '';
 const apiKey = "&client_id=whVq7dM1_Kqd3kcvB_s334hifdSJLAU-nM69nsp_pRQ";  
@@ -72,7 +73,7 @@ function Sidebar(props){
             props.updateHide('hide')
             return( <div className="sidebar__search">
             <p className="sidebar__search--label" >Search for your pattern image:</p><input className="sidebar__search--input" type="text" placeholder="What do you love" name='pattern'onChange={patternInputChange} />
-        
+            <p className="red">Download Disabled for your saftey</p>
         <div className='button'>
            <Link to='/canvas'><input type="submit" value="submit"/></Link>
         </div>
@@ -125,6 +126,10 @@ function Sidebar(props){
             <div>{results()}</div>        
         </form>      
     </div>
+    <div className='image'>
+        <img src={peace} alt="peace" className="sidebar__img"/>
+    </div>
+    
     </>)   
 }
 export default Sidebar;
