@@ -1,14 +1,11 @@
 .sidebar{
-   // border: 1px solid red;
     width: 100%;
     display: flex;
     justify-content: center;
     &__form{
-    //    border: 1px solid red;
         margin: 1rem;
     }
     &__search{
-//        border: 1px solid red;
         margin: 0;
         display: flex;
         flex-direction: column;
@@ -18,17 +15,7 @@
         }
     }
 
-    @keyframes fadeIn {
-        0%{
-            opacity: 0;
-        }
-        100%{
-            opacity: 1;
-        }
-    }
-
     &__upload{
-   //     border: 1px solid red;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -40,13 +27,10 @@
             padding-left: 75px;
             margin-bottom: 1rem;
         }
-        animation-name: fadeIn;
-        animation-duration: 10s;
     }
 
 
     &__button{
-    //    border: 1px solid red;
         margin: .5rem;
         display: flex;
         flex-direction: column;
@@ -86,4 +70,22 @@
 .image{
     display: flex;
     justify-content: center;
+}
+
+p{
+    font-weight: bold;
+    font-size: 20px;
+    font-family: cursive;
+}
+
+input{
+    font-weight: bold;
+    font-size: 20px;
+    font-family: cursive;
+}
+
+label{
+    font-weight: bold;
+    font-size: 20px;
+    font-family: cursive;
 }
