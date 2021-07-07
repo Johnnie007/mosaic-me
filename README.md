@@ -11,7 +11,7 @@ Some of the functionalities are:**
 
 
 
-INSTALLTION
+INSTALLATION
 
 1. Install node Modules with npm install
 
