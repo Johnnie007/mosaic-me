@@ -78,7 +78,7 @@ function Sidebar(props){
             props.updateHide('visible')
             return(
                 <div className="form__upload">
-                        <p>Upload up to 400 Images</p>
+                        <p>Upload up to 25 Images</p>
                         <input className="form__upload--input" type='file' multiple name='file' onChange={handleSubmit}/>
                         <div className='form__upload--btn'>
                             <Link to='/canvas'><input type="submit" value="submit"/></Link>

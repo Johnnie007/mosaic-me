@@ -6,7 +6,7 @@ import React, {useState} from 'react';
 
 function App() {
 
-  let image = 'https://via.placeholder.com/400';
+  let image = '';
   const [main, setMain] = useState(image);
   const [pattern, setPattern] = useState([]);
   const [hide, setHide] = useState('');
