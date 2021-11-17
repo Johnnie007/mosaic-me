@@ -8,7 +8,7 @@ import peace from '../../Images/Peace.jpg';
 let inputData = '';
 const apiKey = "&client_id=whVq7dM1_Kqd3kcvB_s334hifdSJLAU-nM69nsp_pRQ";  
 const apiUrl = "https://api.unsplash.com/search/photos?per_page=400&query=";
-     
+// Sidebar is the update page.   
 function Sidebar(props){
     const [search, setSearch] = useState();
 /*This is the handle submit function that will send an axios request. */

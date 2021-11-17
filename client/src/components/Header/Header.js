@@ -2,7 +2,7 @@ import "./Header.scss";
 import {Link} from 'react-router-dom';
 import graduation from "../../Images/Graduation.jpg";
 
-
+//first page of the app
 function Header(){
 
     /* todo

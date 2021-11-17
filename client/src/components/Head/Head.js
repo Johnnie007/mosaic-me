@@ -1,5 +1,5 @@
 import './head.scss';
-
+//Main header does not change throughout app
 function Head(){
     return(
     <div className="head">

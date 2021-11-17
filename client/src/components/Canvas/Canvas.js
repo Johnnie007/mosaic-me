@@ -6,11 +6,11 @@ import {Link} from 'react-router-dom';
 import html2canvas from 'html2canvas';
 import jsPDF from "jspdf";
 import Head from "../Head/Head";
-
+//The final output of the mosaic converter
 function Canvas(props){
   let mosaicDiv = [];
   let image = props.pattern;
-
+//function to convert image into a mosaic
   if(image.length !== 0){
     let sumNum = 0;
     for(let i = 0; i < 400; i++){
@@ -25,7 +25,7 @@ function Canvas(props){
       sumNum++
     }
   }
-
+//download function to for a pdf
 let generatePDF =() => {
   const input = document.querySelector(".canvas-main__img");
   html2canvas(input, {allowTaint: true, width:400, height:400})
@@ -40,9 +40,7 @@ let generatePDF =() => {
   }
     //const input = document.querySelector(".canvas-main__img");
               
-                
-
-
+//download function for the images
   let download = (event) => {
     console.log(event)
     html2canvas(document.querySelector('.canvas-main__img'), {allowTaint: true, width:400, height:400})
