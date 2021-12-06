@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/mosaic-me/static/css/main.16e962b2.chunk.css",
-    "main.js": "/mosaic-me/static/js/main.4b560fe0.chunk.js",
-    "main.js.map": "/mosaic-me/static/js/main.4b560fe0.chunk.js.map",
+    "main.css": "/mosaic-me/static/css/main.a57e0d99.chunk.css",
+    "main.js": "/mosaic-me/static/js/main.88f4caf3.chunk.js",
+    "main.js.map": "/mosaic-me/static/js/main.88f4caf3.chunk.js.map",
     "runtime-main.js": "/mosaic-me/static/js/runtime-main.94fb6f04.js",
     "runtime-main.js.map": "/mosaic-me/static/js/runtime-main.94fb6f04.js.map",
     "static/js/2.58206fd7.chunk.js": "/mosaic-me/static/js/2.58206fd7.chunk.js",
@@ -12,7 +12,7 @@
     "static/js/4.75d44a03.chunk.js": "/mosaic-me/static/js/4.75d44a03.chunk.js",
     "static/js/4.75d44a03.chunk.js.map": "/mosaic-me/static/js/4.75d44a03.chunk.js.map",
     "index.html": "/mosaic-me/index.html",
-    "static/css/main.16e962b2.chunk.css.map": "/mosaic-me/static/css/main.16e962b2.chunk.css.map",
+    "static/css/main.a57e0d99.chunk.css.map": "/mosaic-me/static/css/main.a57e0d99.chunk.css.map",
     "static/js/2.58206fd7.chunk.js.LICENSE.txt": "/mosaic-me/static/js/2.58206fd7.chunk.js.LICENSE.txt",
     "static/js/3.05ce8171.chunk.js.LICENSE.txt": "/mosaic-me/static/js/3.05ce8171.chunk.js.LICENSE.txt",
     "static/js/4.75d44a03.chunk.js.LICENSE.txt": "/mosaic-me/static/js/4.75d44a03.chunk.js.LICENSE.txt",
@@ -23,7 +23,7 @@
   "entrypoints": [
     "static/js/runtime-main.94fb6f04.js",
     "static/js/3.05ce8171.chunk.js",
-    "static/css/main.16e962b2.chunk.css",
-    "static/js/main.4b560fe0.chunk.js"
+    "static/css/main.a57e0d99.chunk.css",
+    "static/js/main.88f4caf3.chunk.js"
   ]
 }
