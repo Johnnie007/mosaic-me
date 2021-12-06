@@ -1,6 +1,5 @@
 # mosaic-me
-Mosaic me is a fun way to make Mosiac images.
-
+Mosaic me is a fun way to make Mosiac images use images as the pattern piece.
 
 **
 Some of the functionalities are:**
